@@ -1,0 +1,18 @@
+<div class="vh-100 d-flex flex-column bg-secondary bg-opacity-10">
+  <div class="navbar d-flex align-items-center justify-content-between bg-primary-main">
+    <p class="navbar-brand m-0 text-light">CATEGORIES</p>
+    <% if current_user.avatar.attached? %>
+      <%= image_tag current_user.avatar, class: "rounded-circle avatar" %>
+    <% else %>
+      <% image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(current_user.email)}?s=200&d=identicon", class: "rounded-circle avatar" %>
+    <% end %>
+    <%# user profile image if uploaded %>
+  </div>
+  <%# temporary sign out btn %>
+  <div class="d-flex justify-content-end">
+    <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-danger" %>
+  </div>
+  <div class="w-100 bg-second p-3 mt-auto">
+    <%= link_to "NEW CATEGORY", new_group_path, class: "w-100 p-3 btn btn-success text-light border-light" %>
+  </div>
+</div>
