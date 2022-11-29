@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     post '/users', to: 'users/registrations#create', as: :user_registration
   end
 
-  resources :groups, only: [:index, :new, :create, :destroy]
+  resources :groups, except: [:show] do
+    resources :expenses, except: [:show]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -134,10 +134,49 @@ span:nth-of-type(9) {
   background: var(--primary-color) !important;
 }
 
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-success {
+  background: #5fb523 !important;
+}
+
+.btn-success:hover {
+  opacity: 0.8;
+}
+
+
 .bg-primary-main {
   background: var(--primary-color) !important;
 }
 
+
 .avatar {
   width: 50px;
+}
+
+.group-img {
+  width: 100px;
+  height: 80px;
+}
+
+.border-dark {
+  border: 1px solid grey !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.gap-10 {
+  gap: 10px !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.text-secondary {
+  color: #434b54 !important;
 }

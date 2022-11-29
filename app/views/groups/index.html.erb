@@ -1,18 +1,63 @@
-<div class="vh-100 d-flex flex-column bg-secondary bg-opacity-10">
-  <div class="navbar d-flex align-items-center justify-content-between bg-primary-main">
-    <p class="navbar-brand m-0 text-light">CATEGORIES</p>
-    <% if current_user.avatar.attached? %>
-      <%= image_tag current_user.avatar, class: "rounded-circle avatar" %>
-    <% else %>
-      <% image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(current_user.email)}?s=200&d=identicon", class: "rounded-circle avatar" %>
-    <% end %>
+<div class="vh-100 d-flex flex-column bg-secondary align-items-center bg-opacity-10">
+  <div class="w-100 navbar d-flex flex-column p-3 align-items-center justify-content-between bg-primary-main">
     <%# user profile image if uploaded %>
+    <% if current_user.avatar.attached? %>
+      <%= image_tag current_user.avatar, class: "rounded-circle avatar ml-5 align-self-end" %>
+    <% else %>
+      <% image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(current_user.email)}?s=200&d=identicon", class: "rounded-circle avatar align-self-end" %>
+    <% end %>
+    <p class="navbar-brand m-0 text-light">CATEGORIES</p>
   </div>
   <%# temporary sign out btn %>
-  <div class="d-flex justify-content-end">
-    <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-danger" %>
+  <%# list of all categories %>
+  <div class="w-90 d-flex flex-column align-items-center mt-5">
+    <% @groups.each do |group| %>
+      <div class="d-flex flex-column align-items-start w-100 p-2 bg-light text-secondary mt-3">
+        <div class="dropdown ms-auto">
+          <div class="mt-2" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+          </div>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <%= link_to 'Edit', edit_group_path(group), class: 'text-decoration-none text-secondary' %>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="dropdown-item text-danger">
+              <%= button_to 'Delete', group_path(group), method: :delete, data: { turbo: false }, class: "text-decoration-none text-secondary p-0 bg-transparent border-none" %>
+            </li>
+          </ul>
+        </div>
+        <%= link_to group_expenses_path(group), class:"d-flex text-decoration-none text-secondary flex-column align-items-center justify-content-start gap-10 w-100" do %>
+          <div class="d-flex align-items-center justify-content-start gap-10 w-100">
+            <%# category avatar %>
+            <% if group.icon.attached? %>
+              <%= image_tag group.icon, class: "group-img" %>
+            <% else %>
+              <% image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(group.name)}?s=200&d=identicon", class: "group-img" %>
+            <% end %>
+            <%# category name %>
+            <p class="fs-2 align-self-start m-0"><%= group.name %></p>
+          </div>
+          <div class="w-100 d-flex justify-content-between">
+            <p class="fs-4 fw-400 align-self-start m-0">
+              Transactions:
+              <%= group.expenses.count %>
+            </p>
+            <p class="fs-4 fw-400 align-self-end m-0">
+              Total:
+              <%= group.expenses.sum(:amount) %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   <div class="w-100 bg-second p-3 mt-auto">
+    <div class="d-flex justify-content-end">
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-danger" %>
+    </div>
     <%= link_to "NEW CATEGORY", new_group_path, class: "w-100 p-3 btn btn-success text-light border-light" %>
   </div>
 </div>

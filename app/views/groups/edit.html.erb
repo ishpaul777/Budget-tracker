@@ -1,0 +1,23 @@
+<div class="vh-100 d-flex flex-column vh-100 align-items-center">
+  <div class="navbar w-100 d-flex align-items-center bg-primary-main">
+    <%= link_to groups_path, class: "btn" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left text-light" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    <% end %>
+    <p class="navbar-brand m-0 text-light position-absolute top-50 start-50 translate-middle">CATEGORIES</p>
+  </div>
+  <%= form_with(model: @group, class: "w-75 d-flex flex-column" ) do |f| %>
+    <div class="field form-floating mt-3">
+      <%= f.text_field :name, class: "form-control"%>
+      <%= f.label :name, class: "form-label" %>
+    </div>
+    <div class="field mt-3">
+      <%= f.label :icon, class: "form-label" %>
+      <%= f.file_field :icon, class: "form-control" %>
+    </div>
+    <div class="w-100 bg-second mt-3">
+      <%= f.submit "Create Category", class: "w-100 p-3 btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
