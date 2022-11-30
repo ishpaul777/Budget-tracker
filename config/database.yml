@@ -22,7 +22,7 @@ default: &default
   host: 127.0.0.1
   username: <%= ENV["APP_DATABASE_ROLE_NAME"] %>
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>
-  
+
 development:
   <<: *default
   database: Budget_development
@@ -60,8 +60,6 @@ development:
 test:
   <<: *default
   database: Budget_test
-  #username: postgres
-  #password: ishu207
 
 
 
@@ -86,7 +84,7 @@ test:
 #
 production:
   <<: *default
-    url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   database: Budget_production
   username: postgres
   password: <%= ENV["BUDGET_DATABASE_PASSWORD"] %>
