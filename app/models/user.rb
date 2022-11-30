@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_many :groups
   has_many :expenses, through: :groups
+
+  validates :name, presence: true, length: { maximum: 30 }
+  validates :email, presence: true, length: { maximum: 255 }
 end
