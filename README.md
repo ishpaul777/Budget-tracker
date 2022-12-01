@@ -13,7 +13,6 @@
   - [Install](#install)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -22,7 +21,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Budget Tracker] <a name="about-project"></a>
+# 📖 Budget Tracker <a name="about-project"></a>
 
 > This is a RoR mobile app created for tracking your expenses in a organised manner.
 
@@ -34,38 +33,17 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Language</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">Ruby</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Framework</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Rails</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+- Ruby
+- Rails Framework
+- PostgreSQL
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[register and log in, so that the data is private to them]**
-- **[introduce new transactions associated with a category.]**
-- **[see the money spent on each category.]**
+- **register and log in, so that the data is private to them. **
+- **introduce new transactions associated with a category. **
+- **see the money spent on each category.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,8 +60,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
