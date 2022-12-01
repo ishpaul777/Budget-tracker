@@ -13,7 +13,6 @@
   - [Install](#install)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -22,7 +21,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Budget Tracker] <a name="about-project"></a>
+# 📖 Budget Tracker <a name="about-project"></a>
 
 > This is a RoR mobile app created for tracking your expenses in a organised manner.
 
@@ -42,9 +41,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[register and log in, so that the data is private to them]**
-- **[introduce new transactions associated with a category.]**
-- **[see the money spent on each category.]**
+- **register and log in, so that the data is private to them. **
+- **introduce new transactions associated with a category. **
+- **see the money spent on each category.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
