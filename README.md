@@ -34,34 +34,13 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Language</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">Ruby</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Framework</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Rails</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+- Ruby
+- Rails Framework
+- PostgreSQL
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[register and log in, so that the data is private to them]**
 - **[introduce new transactions associated with a category.]**
@@ -82,8 +61,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
