@@ -41,8 +41,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **register and log in, so that the data is private to them. **
-- **introduce new transactions associated with a category. **
+- **register and log in, so that the data is private to them.**
+- **introduce new transactions associated with a category.**
 - **see the money spent on each category.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
