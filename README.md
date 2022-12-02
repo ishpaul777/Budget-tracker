@@ -51,9 +51,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> The app is deplyed using render.com services
-
-- [Live Demo Link](https://mysite-the3.onrender.com/)
+### [Live Demo Link](https://mysite-the3.onrender.com/)
+> The app is deplyed using render.com services. Render took around 15-20 seconds to make the database active please be patient.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
